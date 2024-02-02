@@ -1,0 +1,61 @@
+{% extends "admin_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'admin_app/components/header.html' %}
+<div class="container-fluid py-4">
+    {% include 'admin_app/components/alert.html' %}
+    <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+            <div class="card-header pb-0">
+            <div class="d-flex align-items-center">
+                <p class="mb-0">Edit Project</p>
+                <!-- <button class="btn btn-primary btn-sm ms-auto">Settings</button> -->
+            </div>
+            </div>
+            <div class="card-body">
+                <!-- <p class="text-uppercase text-sm">User Information</p> -->
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="id_image" class="form-control-label">Image:1600x879</label>
+                            <input type="file" name="image"  class="form-control" >
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="id_head" class="form-control-label">Head:</label>
+                            <input type="text" name="head" value="{{ project.head }}" maxlength="500" class="form-control" required>
+    
+                        </div>
+                        </div>
+                        <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="id_description" class="form-control-label">Description:</label>
+                            <textarea name="description" maxlength="1000" class="form-control" required>{{ project.description }}</textarea>
+                        </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="id_status" class="form-control-label">Status:</label>
+                                <input type="checkbox" name="status" {% if project.status %}checked{% endif %}>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <button class="btn btn-primary" type="submit">Edit Project</button>
+                        </div>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+        
+</div>
+
+
+</main>
+{% endblock content %}

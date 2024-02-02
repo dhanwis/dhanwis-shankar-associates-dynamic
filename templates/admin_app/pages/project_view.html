@@ -1,0 +1,50 @@
+{% extends "admin_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'admin_app/components/header.html' %}
+<div class="container-fluid py-4">
+  {% include 'admin_app/components/alert.html' %}
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <!-- <h6 class="mb-0">Project List</h6> -->
+                </div>
+                <!-- <div class="col-6 text-end">
+                    <a href="{% url 'project_add' %}">
+                        <button class="btn btn-primary btn-sm mb-0">Add Project</button>
+                    </a>
+                  
+                </div> -->
+            </div>
+          </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="row">
+                <div class="d-flex justify-content-center">
+                  <a href="{{ project.image.url }}" target="_blank">
+                    <img src="{{ project.image.url }}" alt="" style="max-width: 200px;">
+                  </a>
+                   
+                </div>
+                <hr>
+                <div class="d-flex justify-content-center">
+                    <h3>{{ project.head }}</h3>
+                </div>
+                <hr>
+                <div class="text-center">
+                    {{ project.description }}
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</main>
+
+{% endblock content %}

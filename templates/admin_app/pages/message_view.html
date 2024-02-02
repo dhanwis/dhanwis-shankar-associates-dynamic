@@ -1,0 +1,51 @@
+{% extends "admin_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'admin_app/components/header.html' %}
+<div class="container-fluid py-4">
+  {% include 'admin_app/components/alert.html' %}
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+            <div class="row">
+                <div class="col-6 d-flex align-items-center">
+                  <!-- <h6 class="mb-0">Project List</h6> -->
+                </div>
+                <!-- <div class="col-6 text-end">
+                    <a href="{% url 'project_add' %}">
+                        <button class="btn btn-primary btn-sm mb-0">Add Project</button>
+                    </a>
+                  
+                </div> -->
+            </div>
+          </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="row">
+                <div class="text-center">
+                  <span style="color: green; font-weight: 600;">Name:</span>
+                  <span>{{ message.name }}</span>
+                    
+                </div>
+                <hr>
+                <div class="text-center">
+                  <span style="color: green; font-weight: 600;">Email:</span>
+                  <span>{{ message.email }}</span>
+                    
+                </div><hr>
+                <div class="text-center">
+                  <span style="color: green; font-weight: 600;">Message:</span>
+                  <span>{{ message.message }}</span>
+                    
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+</main>
+{% endblock content %}

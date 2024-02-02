@@ -1,0 +1,125 @@
+{% extends "user_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'user_app/components/header.html' %}
+
+<!-- Navigation -->
+<section class="navigation">
+    <div class="parallax parallax--ser-li">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              services
+            </h2>
+            <ul class="breadcrumbs ul--inline ul--no-style">
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="">Pages</a>
+              </li>
+              <span>/</span>
+              <li class="active">
+                Services
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+  <!-- End Navigation -->
+  <!-- Service List -->
+<section class="service-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 1" src="{% static 'user_app/img/service-list-01.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">Agency interior</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 2" src="{% static 'user_app/img/service-list-02.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">ecommerce interior</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 3" src="{% static 'user_app/img/service-list-03.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">residential interior</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 4" src="{% static 'user_app/img/service-list-04.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">residential interior</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 5" src="{% static 'user_app/img/service-list-05.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">Substation Work</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="service-list__item">
+            <img alt="Service 6" src="{% static 'user_app/img/service-list-06.jpg' %}">
+            <div class="service-list__text">
+              <h5>
+                <a href="">Professional Painting Team</a>
+              </h5>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sitdow volunterr voluptatem
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+{% include 'user_app/components/footer.html' %}
+  
+{% endblock content %}
+  

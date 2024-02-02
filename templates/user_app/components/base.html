@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <!-- ================== Basics =================== -->
+  <title>shankar associates</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="icon" type="image/png" href="{% static 'user_app/img/mine/logo.jpeg' %}">
+
+  <!-- ================== Font =================== -->
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/font/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/font/mdi-font/css/material-design-iconic-font.min.css' %}">
+  <!-- ================== Vendor CSS =================== -->
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/bootstrap4/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/owl-carousel/animate.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/owl-carousel/owl.carousel.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/owl-carousel/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/revolution/settings.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/revolution/navigation.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/revolution/layers.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/vendor/lightbox2/src/css/lightbox.css' %}">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/css/font.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/css/style.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'user_app/css/mine.css' %}">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="page-loader__inner">
+        <div class="page-loader__spin"></div>
+    </div>
+  </div>
+  <!-- End Page Loader -->
+  <!-- Page Wrap -->
+  <div class="page-wrap">
+
+        {% block content %}
+
+        {% endblock content %}
+
+        <!-- Back to top -->
+    <a href="#" id="btn-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- End Back to top -->
+
+    <a href="https://wa.me/919744039290" 
+      target="_blank" id="whatsapp-icon">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <a href="https://www.instagram.com/shankar_associates?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+      target="_blank" id="instagram-icon">
+      <i class="bi bi-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=100063719455283" target="_blank" id="facebook-icon">
+      <i class="bi bi-facebook"></i>
+    </a>
+  </div>
+
+  <!-- End Page Wrap -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- =================== PLUGIN JS ==================== -->
+  <script src="{% static 'user_app/vendor/jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/wow/wow.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/bootstrap4/popper.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/bootstrap4/bootstrap.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/owl-carousel/owl.carousel.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/lightbox2/src/js/lightbox.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/revolution/jquery.themepunch.revolution.min.js' %}" type="text/javascript"></script>
+  <script src="{% static 'user_app/vendor/revolution/jquery.themepunch.tools.min.js' %}" type="text/javascript"></script>
+  <!-- Local Revolution -->
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.migration.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.actions.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.carousel.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.kenburn.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.layeranimation.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.navigation.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.parallax.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.slideanims.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/vendor/revolution/local/revolution.extension.video.min.js' %}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': false,
+        'alwaysShowNavOnTouchDevices': true,
+      });
+    });
+  </script>
+
+  <!-- =================== CUSTOM JS ==================== -->
+  <script type="text/javascript" src="{% static 'user_app/js/main.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/js/revo-custom.js' %}"></script>
+  <script type="text/javascript" src="{% static 'user_app/js/wow-custom.js' %}"></script>
+</body>
+
+</html>

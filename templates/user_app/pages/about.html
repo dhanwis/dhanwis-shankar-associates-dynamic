@@ -1,0 +1,131 @@
+{% extends "user_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'user_app/components/header.html' %}
+
+<!-- Navigation -->
+<section class="navigation">
+    <div class="parallax parallax--nav-1">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              about us
+            </h2>
+            <ul class="breadcrumbs ul--inline ul--no-style">
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="">Pages</a>
+              </li>
+              <span>/</span>
+              <li class="active">
+                About Us
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Navigation -->
+  <!-- Profile -->
+  <section class="we-are">
+    <div class="container">
+      <div class="row no-gutters">
+        
+        <div class="col-lg-7 col-md-12 col-12" data-aos="fade-up">
+          <div class="we-are__right">
+            <h2>Profile</h2>
+            <h2 class="title--small">professional interior Agency</h2>
+
+            <h5>We make your building more perfect with 25 years of experience</h5>
+            <p class="m-b-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi ut lmao labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercit ullamco labont nisi.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat alt nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.At vero eos
+              et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti
+              quos dolores et quas molestias excepturi.Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+              voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-12 col-12" data-aos="fade-up">
+          <div class="profile-img">
+            <img alt="Project 1" src="{% static 'user_app/img/pro-09.jpg' %}">
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Profile -->
+
+  <!-- Service 3 -->
+  <section class="service-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12" data-aos="zoom-in">
+          <div class="service-3__item bottom-shadow">
+            <div class="service-3__inner">
+              <div class="service-3-icon">
+                <div class="service-3-icon__inner">
+                  <img alt="Icon service 1" src="{% static 'user_app/img/mine/vision-1.png' %}">
+                </div>
+              </div>
+
+              <h3>Our Vision</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consecteturd normal adipiscing elit, sed do eiusmod alt tempor incididunt ut labore et dolore
+                lma magna aliqua ut enim advertosom.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12" data-aos="zoom-in">
+          <div class="service-3__item bottom-shadow">
+            <div class="service-3__inner">
+              <div class="service-3-icon">
+                <div class="service-3-icon__inner">
+                  <img alt="Icon service 2" src="{% static 'user_app/img/mine/mission.png' %}">
+                </div>
+              </div>
+              <h3>Our Mission</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consecteturd normal adipiscing elit, sed do eiusmod alt tempor incididunt ut labore et dolore
+                lma magna aliqua ut enim advertosom.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-12" data-aos="zoom-in">
+          <div class="service-3__item bottom-shadow">
+            <div class="service-3__inner">
+              <div class="service-3-icon">
+                <div class="service-3-icon__inner">
+                  <img alt="Icon service 3" src="{% static 'user_app/img/mine/diamond.png' %}">
+                </div>
+              </div>
+
+              <h3>Quality</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consecteturd normal adipiscing elit, sed do eiusmod alt tempor incididunt ut labore et dolore
+                lma magna aliqua ut enim advertosom.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service 3 -->
+  {% include 'user_app/components/footer.html' %}
+  
+  {% endblock content %}

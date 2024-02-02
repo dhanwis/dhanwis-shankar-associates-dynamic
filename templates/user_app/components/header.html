@@ -1,0 +1,223 @@
+{% load static %}
+<!-- Header Stick -->
+<header class="header-stick header-stick--dark">
+    <div class="container clearfix">
+      <h1 class="logo pull-left">
+        <a href="{% url 'home' %}">
+          <img alt="Logo" src="{% static 'user_app/img/mine/logo-2.png' %}">
+        </a>
+      </h1>
+      <nav class="menu-desktop pull-right">
+        <ul class="ul--inline ul--no-style">
+          <li class="li-has-sub">
+            <a href="{% url 'home' %}"  
+              class="{% if current_page == 'home' %}active-mine{% endif %}">
+              Home
+            </a>
+            
+          </li>
+          <li class="li-has-sub">
+            <a href="{% url 'about' %}"
+              class="{% if current_page == 'about' %}active-mine{% endif %}">
+              About
+            </a>
+            
+          </li>
+
+          <li class="li-has-sub">
+            <a href="{% url 'services' %}"
+              class="{% if current_page == 'services' %}active-mine{% endif %}">
+              Services
+            </a>
+            
+          </li>
+
+          <li class="li-has-sub">
+            <a href="projects"
+              class="{% if current_page == 'projects' %}active-mine{% endif %}">
+              Projects
+            </a>
+            
+          </li>
+          
+
+          <li class="li-has-sub">
+            <a href="{% url 'contact' %}"
+              class="{% if current_page == 'contact' %}active-mine{% endif %}">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header Stick -->
+  <!-- Header Mobile -->
+  <header class="header-mobile">
+    <div class="container clearfix">
+      <h1 class="logo pull-left">
+        <a href="{% url 'home' %}">
+          <img alt="Logo" src="{% static 'user_app/img/mine/logo.jpeg' %}" style="width: 85px;">
+        </a>
+      </h1>
+      <a class="menu-mobile__button">
+        <i class="fa fa-bars"></i>
+      </a>
+      <nav class="menu-mobile hidden">
+        <ul class="ul--no-style">
+          <li>
+            
+            <a href="{% url 'home' %}"
+              class="{% if current_page == 'home' %}active-mine{% endif %}">
+              Home
+            </a>
+            
+          </li>
+
+          <li>
+            
+            <a href="{% url 'about' %}"
+              class="{% if current_page == 'about' %}active-mine{% endif %}">
+              About
+            </a>
+            
+          </li>
+          
+          <li>
+            
+            <a href="{% url 'services' %}"
+              class="{% if current_page == 'services' %}active-mine{% endif %}">
+              Services
+            </a>
+            
+          </li>
+          <li>
+            
+            <a href="{% url 'projects' %}"
+              class="{% if current_page == 'projects' %}active-mine{% endif %}">
+              
+            </a>
+            
+          </li>
+          
+          
+          <li>
+            <a href="{% url 'contact' %}"
+              class="{% if current_page == 'contact' %}active-mine{% endif %}">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header Mobile -->
+  {% if current_page == 'home'%}
+    <!-- Header Desktop -->
+    <header class="header-desktop header2 header--bg-dark">
+      <div class="container clearfix">
+        <h1 class="logo pull-left">
+          <a href="{% url 'home' %}">
+            <img alt="Logo" src="{% static 'user_app/img/mine/logo-white.png' %}" style="width: 90px;">
+          </a>
+        </h1>
+
+        <nav class="menu-desktop menu-desktop--show pull-right">
+          <ul class="ul--inline ul--no-style">
+            <li class="li-has-sub">
+              <a href="{% url 'home' %}"
+                class="{% if current_page == 'home' %}active-mine{% endif %}">
+                Home
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'about' %}">
+                About
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'services' %}">
+                Services
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'projects' %}">
+                Projects
+              </a>
+              
+            </li>
+                        
+            <li class="li-has-sub">
+              <a href="{% url 'contact' %}">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Desktop -->
+  {% else %}
+     <!-- Header Desktop -->
+     <header class="header-desktop header1">
+      <div class="container clearfix">
+        <h1 class="logo pull-left">
+          <a href="{% url 'home' %}">
+            <img alt="logo" src="{% static 'user_app/img/mine/logo-1.png' %}">
+          </a>
+        </h1>
+
+        
+        <nav class="menu-desktop menu-desktop--show pull-right">
+          <ul class="ul--inline ul--no-style">
+            <li class="li-has-sub">
+              <a href="{% url 'home' %}"
+              class="{% if current_page == 'home' %}active-mine{% endif %}">
+                Home
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'about' %}"
+              class="{% if current_page == 'about' %}active-mine{% endif %}">
+                About
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'services' %}"
+                class="{% if current_page == 'services' %}active-mine{% endif %}">
+                Services
+              </a>
+              
+            </li>
+
+            <li class="li-has-sub">
+              <a href="{% url 'projects' %}"
+                class="{% if current_page == 'projects' %}active-mine{% endif %}">
+                Projects
+              </a>
+              
+            </li>
+                        
+            <li class="li-has-sub">
+              <a href="{% url 'contact' %}"
+                class="{% if current_page == 'contact' %}active-mine{% endif %}">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Desktop -->
+  {% endif %}
+  

@@ -1,0 +1,104 @@
+{% extends "user_app/components/base.html" %}
+{% load static %}
+{% block content %}
+
+{% include 'user_app/components/header.html' %}
+
+<!-- Navigation -->
+<section class="navigation">
+    <div class="parallax parallax--ser-li">
+      <div class="container clearfix">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              Contacts
+            </h2>
+            <ul class="breadcrumbs ul--inline ul--no-style">
+              <li>
+                <a href="{% url 'home' %}">Home</a>
+              </li>
+              <span>/</span>
+              <li>
+                <a href="">Pages</a>
+              </li>
+              <span>/</span>
+              <li class="active">
+                Contacts
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- End Navigation -->
+{% include 'user_app/components/alert.html' %}
+<!-- Contact content -->
+<section class="contact-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="m-t-40">
+            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31235.34804326256!2d75.35496365751952!3d11.875919503914979!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43de7abdc2035%3A0xc033a223984596e0!2sSankar%20%26%20Moorthy%20Chartered%20Accountants!5e0!3m2!1sen!2sin!4v1705299749136!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-up">
+          <div class="form-contact-wrap m-t-40">
+            <h4>Send us a message</h4>
+
+            <form method="post" class="form-contact" role="form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 col-12">
+                  <input type="text" name="name" required placeholder="Your Name*">
+                </div>
+                <div class="col-md-6 col-12">
+                  <input type="email" name="email" required placeholder="Your Email*">
+                </div>
+                <div class="col-md-12">
+                  <textarea name="message" class="message" required placeholder="Your Message"></textarea>
+                </div>
+              </div>
+              <div>
+                <button type="submit" class="au-btn au-btn--pill au-btn--yellow au-btn--big">Contact Us</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Content -->
+  <!-- Contact Info -->
+  <section class="contact-info">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <h4 class="p-t-30">Contact info</h4>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="p-t-30">
+            <i class="fa fa-map-marker m-r-8 conatct-icon"></i>
+            134 Collin St , Nottingham , UK
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="p-t-30">
+            <i class="fa fa-phone m-r-8 conatct-icon"></i>
+            (+24) 1344 205 699
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="p-t-30">
+            <i class="fa fa-envelope m-r-8 conatct-icon"></i>
+            ContactArch@gmail.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Info -->
+
+{% include 'user_app/components/footer.html' %}
+  
+{% endblock content %}
